@@ -9,9 +9,9 @@
     $strP_id = $_GET["P_id"];
   }
  require "connect.php";
- $sql = "SELECT patient.P_id ,patient.P_Name, patient.P_DOB, patient.P_Debt, permissions.P_UserName
+ $sql = "SELECT patient.P_id ,patient.P_name, patient.P_DOB, patient.P_debt, permissions.P_Username
         FROM patient, permissions
-        WHERE patient.P_id = permissions.P_Cid 
+        WHERE patient.P_id = permissions.P_CID 
         and patient.P_id='".$_GET["P_id"]."'";
         echo $sql;
  $params = array($strP_id);
@@ -29,12 +29,12 @@
 
   <tr>
     <th width="130">ชื่อคนไข้</th>
-    <td><?php echo $result["P_Name"]; ?></td>
+    <td><?php echo $result["P_name"]; ?></td>
   </tr>
 
   <tr>
     <th width="130">อีเมลคนไข้</th>
-    <td><?php echo $result["P_UserName"]; ?></td>
+    <td><?php echo $result["P_Username"]; ?></td>
   </tr>
 
   <tr>
@@ -44,7 +44,7 @@
 
   <tr>
     <th width="130">ยอดหนี้</th>
-    <td><?php echo $result["P_Debt"]; ?></td>
+    <td><?php echo $result["P_debt"]; ?></td>
   </tr>
 
   </table>

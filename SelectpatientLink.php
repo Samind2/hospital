@@ -13,7 +13,7 @@ require "connect.php";
 // ลองให้โชว์ข้อมูล customer
 $sql = "SELECT patient.P_id ,patient.P_Name, permissions.P_UserName
         FROM patient, permissions
-        WHERE patient.P_id = permissions.P_Cid" ; 
+        WHERE patient.P_id = permissions.P_CID" ; 
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 ?>

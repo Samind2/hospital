@@ -1,18 +1,18 @@
 <?php
-if(isset($_GET['P_id'])):
-    echo"<br>" . $_GET['P_id'];
+if(isset($_GET['P_name'])):
+    echo"<br>" . $_GET['P_name'];
     require 'connect.php';
     $count=0;
-    $sql = "SELECT * FROM country where countryName = :countryName";
+    $sql = "SELECT * FROM patient where P_name = :P_name";
     $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':countryName', $_GET['countryName']);
+    $stmt->bindParam(':P_name', $_GET['P_name']); //stmt เป็นตัวแปลจะตั้งชื่ออะไรก็ได้ แต่ต้องตรงกัน//
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
     echo "<br>**********<br>";
 
     while ($row = $stmt->fetch()) {
-        echo $row['CountryName'].''.$row['CountryName']."<br/>";
+        echo $row['P_id'].''.$row['P_name'].''.$row['P_DOB']."<br/>";
         $count++;
     }
     //echo "count ... ".$count;

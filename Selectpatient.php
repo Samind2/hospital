@@ -41,15 +41,15 @@ $stmt->execute();
     </td>
 
     <td>
-         <?php echo $result["P_Name"];?>
+         <?php echo $result["P_name"];?>
     </td>
 
     <td>
-         <?php echo $result["P_Debt"];?>
+         <?php echo $result["P_debt"];?>
     </td>
 
     <td>
-         <?php echo $result["P_UserName"];?>
+         <?php echo $result["P_Username"];?>
     </td>
 
     </tr>

@@ -4,8 +4,8 @@
     </head>
     <body>
         <h1> Test SQL injection</h1>
-        <form action="select_injectionbiandparam.php" method="GET">
-            <input type="text" placeholder="Enter Customer ID"name="CustomerID">
+        <form action="SelectpatientLinkdetailbainParam.php" method="GET">
+            <input type="text" placeholder="Enter P_name"name="P_name">
             <br><br>
             <input type="submit">
         </form>
